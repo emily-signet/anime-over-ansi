@@ -1,4 +1,4 @@
-use anime_telnet::encoding::*;
+use ansi_lib::packets::*;
 
 use bytes::{Buf, BytesMut};
 

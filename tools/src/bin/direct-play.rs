@@ -1,7 +1,12 @@
-use anime_telnet::{encoding::*, metadata::*, palette::AnsiColorMap, subtitles::SSAFilter};
-use anime_telnet_encoder::ANSIVideoEncoder;
+use anime_telnet_encoder::{pre_processor::*, ANSIVideoEncoder};
+use ansi_lib::metadata::*;
+use ansi_lib::packets::*;
 use clap::Arg;
-use play::{player, subtitles::SubtitlePacket};
+use color_lib::palette::AnsiColorMap;
+use play::{
+    player,
+    subtitles::{SSAFilter, SubtitlePacket},
+};
 
 use cyanotype::*;
 use std::collections::HashSet;

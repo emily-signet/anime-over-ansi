@@ -1,6 +1,5 @@
-use anime_telnet::encoding::*;
-
-use anime_telnet::metadata::CompressionMode;
+use ansi_lib::metadata::CompressionMode;
+use ansi_lib::packets::*;
 use bytes::{BufMut, BytesMut};
 
 use tokio_util::codec::Encoder;

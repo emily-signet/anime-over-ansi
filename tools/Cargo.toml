@@ -37,8 +37,11 @@ git = "https://github.com/alisww/cyanotype.git"
 [dependencies.ac-ffmpeg]
 git = "https://github.com/alisww/rust-ac-ffmpeg.git"
 
-[dependencies.anime_telnet]
-path = "../anime_lib"
+[dependencies.ansi_lib]
+path = "../ansi_lib"
+
+[dependencies.color_lib]
+path = "../color_lib"
 
 [dependencies.play]
 path = "../play"

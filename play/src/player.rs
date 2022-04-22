@@ -1,5 +1,5 @@
 use crate::subtitles::SubtitlePacket;
-use anime_telnet::encoding::EncodedPacket;
+use ansi_lib::packets::EncodedPacket;
 
 use async_broadcast::{Receiver, Sender};
 use futures::stream::{Stream, StreamExt};

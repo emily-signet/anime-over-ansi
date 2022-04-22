@@ -1,14 +1,18 @@
 mod codec;
 pub use codec::*;
 // pub mod midi;
+pub mod pre_processor;
 pub mod subtitles;
 
-use anime_telnet::encoding::{AnsiEncoder, EncodedPacket, PacketFlags, PacketTransformer};
-use anime_telnet::metadata::{ColorMode, DitherMode};
+use ansi_lib::encoder::*;
+use ansi_lib::metadata::*;
+use ansi_lib::packets::*;
+
 use futures::stream::Stream;
 use image::{Rgb, RgbImage};
 use indicatif::{MultiProgress, ProgressBar, ProgressStyle};
 use std::pin::Pin;
+use std::time::Duration;
 
 /// An ANSI video encoder with a progress bar.
 pub struct SpinnyANSIVideoEncoder {
@@ -24,11 +28,12 @@ impl SpinnyANSIVideoEncoder {
         let bar = parent.add(ProgressBar::new_spinner());
         bar.set_style(
             ProgressStyle::default_spinner()
-                .template("{spinner} Stream {msg} @ {per_sec:5!}fps - encoding frame {pos}"),
+                .template("{spinner} Stream {msg} @ {per_sec:5!}fps - encoding frame {pos}")
+                .unwrap(),
         );
         bar.set_position(0);
         bar.set_message(underlying.stream_index.to_string());
-        bar.enable_steady_tick(200);
+        bar.enable_steady_tick(Duration::from_millis(200));
 
         SpinnyANSIVideoEncoder { underlying, bar }
     }

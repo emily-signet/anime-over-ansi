@@ -40,8 +40,11 @@ features = ["io-std","net","time","macros","io-util","fs","rt-multi-thread"]
 version = "0.6.9"
 features = ["codec"]
 
-[dependencies.anime_telnet]
-path = "../anime_lib"
+[dependencies.ansi_lib]
+path = "../ansi_lib"
+
+[dependencies.color_lib]
+path = "../color_lib"
 
 [dependencies.substation]
 git = "https://github.com/alisww/substation.git"

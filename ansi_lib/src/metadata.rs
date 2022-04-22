@@ -1,4 +1,4 @@
-use crate::palette::AnsiColorMap;
+use color_lib::palette::AnsiColorMap;
 use derive_builder::Builder;
 use serde::{Deserialize, Serialize};
 use std::fmt;

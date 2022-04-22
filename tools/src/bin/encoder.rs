@@ -1,8 +1,11 @@
-use anime_telnet::{encoding::*, metadata::*, palette::AnsiColorMap};
 use anime_telnet_encoder::{
-    subtitles, ANSIVideoEncoder, PacketWriteCodec as PacketCodec, SpinnyANSIVideoEncoder,
+    pre_processor::*, subtitles, ANSIVideoEncoder, PacketWriteCodec as PacketCodec,
+    SpinnyANSIVideoEncoder,
 };
+use ansi_lib::metadata::*;
+use ansi_lib::packets::*;
 use clap::Arg;
+use color_lib::palette::AnsiColorMap;
 
 use cyanotype::*;
 use std::collections::{HashMap, HashSet};

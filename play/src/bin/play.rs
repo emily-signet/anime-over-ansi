@@ -1,13 +1,8 @@
-use anime_telnet::{
-    encoding::PacketDecoder,
-    metadata::{SubtitleFormat, VideoMetadata},
-    subtitles::SSAFilter,
-};
-use play::{
-    codec::PacketReadCodec,
-    player,
-    subtitles::{SRTDecoder, SSADecoder, SubtitlePacket},
-};
+use ansi_lib::metadata::{SubtitleFormat, VideoMetadata};
+use ansi_lib::packets::*;
+use play::codec::PacketReadCodec;
+use play::player;
+use play::subtitles::*;
 
 use clap::Arg;
 use dialoguer::{theme::ColorfulTheme, Select};

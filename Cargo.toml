@@ -1,9 +1,10 @@
 [workspace]
 members = [
-    "anime_lib",
+    "ansi_lib",
+    "color_lib",
     "tools",
     "play"
 ]
 
 [profile.release]
-debug = true
+lto = true

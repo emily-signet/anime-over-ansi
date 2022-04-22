@@ -1,6 +1,8 @@
-use anime_telnet::{encoding::*, metadata::*, palette::PALETTE};
 use anime_telnet_encoder::{ANSIVideoEncoder, PacketWriteCodec as PacketCodec};
+use ansi_lib::metadata::*;
+use ansi_lib::packets::*;
 use clap::Arg;
+use color_lib::palette::PALETTE;
 
 use cyanotype::*;
 

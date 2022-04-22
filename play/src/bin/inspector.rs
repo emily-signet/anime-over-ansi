@@ -1,4 +1,4 @@
-use anime_telnet::metadata::VideoMetadata;
+use ansi_lib::metadata::*;
 use futures::StreamExt;
 use play::codec::PacketReadCodec;
 
